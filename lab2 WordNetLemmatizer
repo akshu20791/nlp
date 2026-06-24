@@ -1,0 +1,33 @@
+
+pip install nltk
+
+
+
+
+#####################################
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+words = [
+    "cars",
+    "dogs",
+    "books",
+    "cities"
+]
+for word in words:
+    print(
+        word,
+        " --> ",
+        lemmatizer.lemmatize(word)
+    )
+
+#########################################
+
+
+Output
+cars --> car
+dogs --> dog
+books --> book
+cities --> city
